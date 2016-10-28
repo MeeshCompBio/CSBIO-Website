@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Welcome to the CSBio Lab</title>
+
+    <!-- Load the CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Load CSS from free to use template -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Load Font -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+    <!-- Navigation bar is from a script I made that pastes text -->
+    <script type="text/javascript" src="/js/header.js"></script>
+
+
+    <!-- Header Using Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill" style="background-image:url('/images/LabPhoto.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>This is our lab</h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/images/Figure_5_v7.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2></h2>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill" style="background-image:url('/images/pathway_interaction.png');"></div>
+                <div class="carousel-caption">
+                    <h2>Genetic Interactions</h2>
+                </div>
+            </div>        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- News Header Tables -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Welcome to the CSBio Lab
+                </h1>
+                <h2 class="page-header">
+                    Recent News
+                </h2>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-compass"></i> Breast cancer award</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Congratulations to Wen and Chad for their first place finish in the National Cancer Institute’s Up for A Challenge</p>
+                        <a href="/news.html" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i> New website</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>The lab website 2.0 is now up and running!</p>
+                        <a href="/news.html" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-star"></i> New lab member</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Xiaotong Liu has joined the lab as a PhD student</p>
+                        <a href="/news.html" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+        <!-- Quick Summary -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">About Us</h2>
+            </div>
+            <div class="col-md-6">
+                <p>Recent developments in biotechnology have enabled quantitative measurement of diverse cellular phenomena. For instance, microarray technology allows biologists to measure the expression of all genes in the genome on a single chip. Other technology allows high-throughput measurement of physical interactions between proteins, which are an important mechanism behind most cellular processes. These recent developments have generated an unprecedented amount of data for several different organisms. These data promise to revolutionize our understanding of biology, but integrating information across several noisy, heterogeneous datasets to derive holistic models of the cell requires sophisticated computational approaches.
+
+                Our research focuses on machine learning approaches for integrating diverse genomic data to make inferences about biological networks. The main purpose of our work is to further our understanding of gene function and how genes or proteins interact to carry out cellular processes.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive" src="/images/Network.jpg" alt="">
+            </div>
+        </div>
+
+    <!-- Footer -->
+    <script type="text/javascript" src="/js/footer.js"></script>
+    </div>
+    <!-- container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
+</html>
