@@ -20,151 +20,297 @@
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Using all of this for a bootstrap datatables -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">   
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" 
+    href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"></style>
+    <script type="text/javascript" 
+    src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" 
+    src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-</head>
+    </head>
 
-<body>
+    <body>
+        <!-- Page Content -->
+        <div class="container">
 
-    <!-- Navigation bar is from a script I made that pastes text -->
-    <script type="text/javascript" src="/js/header.js"></script>
-
-
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <!-- Page Heading/Breadcrumbs -->
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Lab Member Area
-                    <small></small>
-                </h1>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Content Row -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="panel-group" id="accordion">
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Machine list</a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <table class="table">
-                                  <thead>
-                                    <tr>
-                                      <th></th>
-                                      <th>Machine</th>
-                                      <th>Primary User</th>
-                                      <th>Locaiton</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr class="danger">
-                                      <th scope="row">1</th>
-                                      <td>Helix01</td>
-                                      <td>N/A</td>
-                                      <td>Cabinet</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">2</th>
-                                      <td>Helix15</td>
-                                      <td>Meesh</td>
-                                      <td>MCB</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">3</th>
-                                      <td>Blah</td>
-                                      <td>Blah</td>
-                                      <td>Blah</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Group meeting Schedule</a>
-                            </h4>
-                        </div>
-                        <div id="collapseOne" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <table class="table">
-                                  <thead>
-                                    <tr>
-                                      <th></th>
-                                      <th>Date</th>
-                                      <th>Name</th>
-                                      <th>Type</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr class="success">
-                                      <th scope="row">1</th>
-                                      <td>Aug 9</td>
-                                      <td>Meesh</td>
-                                      <td>Research</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">2</th>
-                                      <td>Aug 16</td>
-                                      <td>Justin</td>
-                                      <td>Paper</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">3</th>
-                                      <td>Blah</td>
-                                      <td>Blah</td>
-                                      <td>Blah</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Courses to take</a>
-                            </h4>
-                        </div>
-                        <div id="collapseTwo" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                Check these courses out!
-                            </div>
-                        </div>
-                    </div>
-                <!-- /.panel-group -->
+            <!-- Page Heading/Breadcrumbs -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Servers and Workstations
+                        <small></small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="LabMemberArea.html">Lab Member Home</a>
+                        </li>
+                    </ol>
                 </div>
             </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-
-        <hr>
-
-    <!-- Footer -->
-    <script type="text/javascript" src="/js/footer.js"></script>
-
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="../js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../js/bootstrap.min.js"></script>
-
-</body>
+            <!-- /.row -->
+            <div class="row">
+            <div class="col-lg-12">
+        <!-- Navigation bar is from a script I made that pastes text -->
+        <script type="text/javascript" src="/js/header.js"></script>
+            <table id="example" class="display" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Cores</th>
+                        <th>Memory</th>
+                        <th>OS</th>
+                        <th>Type</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Name</th>
+                        <th>Threads</th>
+                        <th>Memory</th>
+                        <th>OS</th>
+                        <th>Type</th>
+                        <th>Notes</th>
+                </tfoot>
+                <tbody>
+                    <tr>
+                        <td>Darwin</td>
+                        <td>8</td>
+                        <td>32 GB</td>
+                        <td>Ubuntu 12.04</td>
+                        <td>Server</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Mendel</td>
+                        <td>8</td>
+                        <td>32 GB</td>
+                        <td>Ubuntu 12.04</td>
+                        <td>Server</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Ohno</td>
+                        <td>12</td>
+                        <td>96 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Server</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Fisher</td>
+                        <td>12</td>
+                        <td>96 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Server</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Morgan</td>
+                        <td>32</td>
+                        <td>194 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Server</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>McClintock</td>
+                        <td>32</td>
+                        <td>194 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Server</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Lovelace</td>
+                        <td>24</td>
+                        <td>126 GB</td>
+                        <td>Ubuntu 16.04.1</td>
+                        <td>Server</td>
+                        <td>Webserver</td>
+                    </tr>
+                    <tr>
+                        <td>Golgi</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Mitochondrion</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Nucleus</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Peroxisome</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Peroxisome</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Cytoplasm</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Ribosome</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Vacuole</td>
+                        <td>2</td>
+                        <td>3 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Cluster</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>crick</td>
+                        <td>4</td>
+                        <td>6 GB</td>
+                        <td>SunOS 5.11</td>
+                        <td>Storage</td>
+                        <td>/project/csbio (off-site)</td>
+                    </tr>
+                    <tr>
+                        <td>watson</td>
+                        <td>4</td>
+                        <td>6 GB</td>
+                        <td>SunOS 5.11</td>
+                        <td>Storage</td>
+                        <td>/project/csbio (live)</td>
+                    </tr>
+                    <tr>
+                        <td>Franklin</td>
+                        <td>8</td>
+                        <td>94 GB</td>
+                        <td>SunOS 5.10</td>
+                        <td>Server</td>
+                        <td>Web Server (Lab website location)</td>
+                    </tr>
+                    <tr>
+                        <td>Helix15</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Meesh</td>
+                    </tr>
+                    <tr>
+                        <td>Helix17</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Scott</td>
+                    </tr>
+                    <tr>
+                        <td>Helix16</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Justin</td>
+                    </tr>
+                    <tr>
+                        <td>Helix20</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Mahfuz</td>
+                    </tr>
+                    <tr>
+                        <td>Helix21</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Elizabeth</td>
+                    </tr>
+                    <tr>
+                        <td>Helix22</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Xiaotong</td>
+                    </tr>
+                    <tr>
+                        <td>Helix14</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Hamid</td>
+                    </tr>
+                    <tr>
+                        <td>Helix19</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Joe (Shared)</td>
+                    </tr>
+                    <tr>
+                        <td>Helix18</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 16.04</td>
+                        <td>Workstation</td>
+                        <td>Wen</td>
+                    </tr>
+                    <tr>
+                        <td>Helix 11</td>
+                        <td>8</td>
+                        <td>64 GB</td>
+                        <td>Ubuntu 14.04</td>
+                        <td>Workstation</td>
+                        <td>Cici (Shared)</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            </div>
+          <script>
+          $(document).ready(function(){
+              $('#example').dataTable({
+                "iDisplayLength": 20,
+                "order": [[ 1, "desc" ]]
+                });
+          });
+          </script>
+          <script type="text/javascript" src="/js/footer.js"></script>
+    </body>
 
 </html>
