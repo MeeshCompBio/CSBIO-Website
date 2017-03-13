@@ -186,6 +186,7 @@
           $(document).ready(function(){
               $.fn.dataTable.moment( 'MM/DD/YYYY' );
               $('#example').dataTable({
+                "iDisplayLength": 50,
                 "order": [[ 0, "asc" ]]
                 });
           });
