@@ -12,7 +12,6 @@ body {
 
 .intro {
     position: absolute;
-    text-align: justify;
     animation: intro 6s ease-out 1s;
     color: #40E0D0;
     font-weight: 400;
@@ -42,7 +41,7 @@ body {
     left: 45%;
     z-index: 1;
     margin: auto;
-    animation: logo 9s ease-out 9s;
+    animation: logo 7s ease-out 7s;
     opacity: 0;
 }
 
